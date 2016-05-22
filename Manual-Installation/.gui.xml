@@ -1,0 +1,1158 @@
+    <!-- Config for layout 'ModRequests' -->
+    <gc:guilayout columns="9" display="Mod Requests" dots="false" grid="false" name="ModRequests" padding="2" rows="14">
+        <gc:metrics>
+            <gc:column id="1" width="10"/>
+            <gc:column id="3" width="10"/>
+            <gc:column id="5" width="10"/>
+            <gc:column id="7" width="10"/>
+        </gc:metrics>
+        <gc:controls>
+            <gc:label colspan="9" id="7000" name="ModReqestsLbl" x="0" y="0">
+                <align>middle centre</align>
+                <background>#003C68</background>
+                <binding/>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>Mod Requests</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="3" id="7001" name="ModReqestsLblSelectHeader" x="0" y="1">
+                <align>bottom left</align>
+                <background>#DEFFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text> List &amp; Choose Requests:</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:button id="7002" name="ModReqestsBtnModReqSelect" x="0" y="2">
+                <background>#B0000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Select Mod Req</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7003" name="ModReqestsBtnAdminReqSelect" x="0" y="3">
+                <background>#B0000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Select Admin Req</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7004" name="ModReqestsBtnListModReq" x="2" y="2">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>List Mod Reqs</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7005" name="ModReqestsBtnListAdminReq" x="2" y="3">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>List Admin Reqs</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:label colspan="3" id="7010" name="ModReqestsLblWithHeader" x="0" y="4">
+                <align>bottom left</align>
+                <background>#DEFFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text> With Selected Request:</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:button id="7011" name="ModReqestsBtnClaim" x="0" y="5">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Claim</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7012" name="ModReqestsBtnUnclaim" x="2" y="5">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Unclaim</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7013" name="ModReqestsBtnClaimTP" x="0" y="6">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Claim &amp; TP</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7014" name="ModReqestsBtnTeleport" x="2" y="6">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Teleport</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:label colspan="3" id="7020" name="ModReqestsLblModifyHeader" x="0" y="7">
+                <align>bottom left</align>
+                <background>#DEFFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text> Modify Request:</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:button id="7021" name="ModReqestsBtnDone" x="0" y="8">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Done</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7022" name="ModReqestsBtnAddNote" x="2" y="8">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Add Note</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7023" name="ModReqestsBtnReOpen" x="0" y="9">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Re-Open</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7024" name="ModReqestsBtnElevate" x="2" y="9">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Elevate</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:label colspan="3" id="7030" name="ModReqestsLblModMode" x="0" y="10">
+                <align>bottom left</align>
+                <background>#FFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text> ModMode:</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:button id="7031" name="ToggleModMode" x="0" y="11">
+                <background>#B0000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Enter ModMode</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:label colspan="5" id="7041" name="ModReqestsLblInfoHeader" x="4" y="1">
+                <align>bottom left</align>
+                <background>#DEFFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text> Selected Request Info:</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="5" id="7042" name="ModReqestsLblNumDisplay" x="4" y="2">
+                <align>middle centre</align>
+                <background>#84000000</background>
+                <binding>@&amp;currentreqnumber</binding>
+                <colour>#00C3FF</colour>
+                <shadow>0</shadow>
+                <text>Currently Handling Request #%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="2" id="7043" name="SelectedModReqLblPlayerHeader" x="4" y="3">
+                <align>bottom left</align>
+                <background>#FFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text> Player:</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="2" id="7044" name="SelectedModReqLblPlayer" x="4" y="4">
+                <align>middle left</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqplayername</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> %%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="7045" name="SelectedModReqLblDateHeader" x="6" y="3">
+                <align>bottom centre</align>
+                <background>#FFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text>Date: </text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="7046" name="SelectedModReqLblDate" x="6" y="4">
+                <align>middle centre</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqdate</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="2" id="7047" name="SelectedModReqLblLocHeader" x="7" y="3">
+                <align>bottom right</align>
+                <background>#FFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text>Location: </text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="2" id="7048" name="SelectedModReqLblLoc" x="7" y="4">
+                <align>middle right</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqlocation</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="5" id="7049" name="SelectedModReqLblText" x="4" y="5">
+                <align>middle left</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqtext</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> Text: %%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="5" id="7050" name="SelectedModReqLblNote0" x="4" y="6">
+                <align>middle left</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqnote[0]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> Note #1: %%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label colspan="5" id="7051" name="SelectedModReqLblNote1" x="4" y="7">
+                <align>middle left</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqnote[1]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> Note #2: %%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label colspan="5" id="7052" name="SelectedModReqLblNote2" x="4" y="8">
+                <align>middle left</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqnote[2]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> Note #3: %%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label colspan="5" id="7053" name="SelectedModReqLblNote3" x="4" y="9">
+                <align>middle left</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqnote[3]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> Note #4: %%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label colspan="5" id="7054" name="SelectedModReqLblNote4" x="4" y="10">
+                <align>middle left</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqnote[4]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> Note #5: %%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label colspan="5" id="7055" name="SelectedModReqLblNote5" x="4" y="11">
+                <align>middle left</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqnote[5]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> Note #6: %%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label colspan="9" id="7060" name="ModReqestsLblSwitchScreen" x="0" y="12">
+                <align>bottom left</align>
+                <background>#DEFFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text> Switch to Screen:</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:button id="7061" name="ModReqestsBtnScreenRegions" x="0" y="13">
+                <background>#DE000000</background>
+                <colour>#C700FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Regions</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7062" name="ModReqestsBtnScreenEasySigns" x="2" y="13">
+                <background>#B0000000</background>
+                <colour>#00FF00</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Easy Signs</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7063" name="ModReqestsBtnScreenPlayerModeration" x="4" y="13">
+                <background>#DE000000</background>
+                <colour>#F7FF00</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Player Moderation</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7064" name="ModReqestsBtnScreenGriefing" x="6" y="13">
+                <background>#DE000000</background>
+                <colour>#FF9B00</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Griefing</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7065" name="ModReqestsBtnScreenXRay" x="8" y="13">
+                <background>#B0000000</background>
+                <colour>#FF0000</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>X-Ray</text>
+                <visible>1</visible>
+            </gc:button>
+        </gc:controls>
+    </gc:guilayout>
+    <!-- Config for layout 'SelectReq' -->
+    <gc:guilayout columns="8" display="Select A Mod Request" dots="false" grid="false" name="SelectReq" padding="1" rows="20">
+        <gc:metrics>
+            <gc:column id="0" width="30"/>
+            <gc:column id="1" width="40"/>
+            <gc:column id="2" width="40"/>
+            <gc:column id="3" width="40"/>
+            <gc:column id="4" width="40"/>
+            <gc:column id="5" width="90"/>
+        </gc:metrics>
+        <gc:controls>
+            <gc:label colspan="8" id="8000" name="SelectReqLbl" x="0" y="0">
+                <align>middle centre</align>
+                <background>#003C68</background>
+                <binding/>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>Select A Mod Request</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="8001" name="SelectReqLblNumber" x="0" y="1">
+                <align>bottom centre</align>
+                <background>#DEFFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text>#</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="4" id="8002" name="SelectReqLblRequestActions" x="1" y="1">
+                <align>bottom centre</align>
+                <background>#DEFFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text>Actions</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="8003" name="SelectReqLblDate" x="5" y="1">
+                <align>bottom centre</align>
+                <background>#DEFFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text>Date</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="8004" name="SelectReqLblStatus" x="6" y="1">
+                <align>bottom centre</align>
+                <background>#DEFFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text>Claimed By</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="8005" name="SelectReqLblRequester" x="7" y="1">
+                <align>bottom left</align>
+                <background>#DEFFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text> Requester</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="8010" name="SelectReqLblNumber0" rowspan="2" x="0" y="2">
+                <align>middle left</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqnumber[0]</binding>
+                <colour>#00FFCF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="7" id="8011" name="SelectReqLblRequestText0" x="1" y="2">
+                <align>middle left</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqrequesttext[0]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:button id="8012" name="SelectReqBtnSelect0" x="1" y="3">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Select </text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="8013" name="SelectReqBtnClaimTP0" x="2" y="3">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Claim&amp;TP </text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="8014" name="SelectReqBtnTeleport0" x="3" y="3">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Teleport </text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="8015" name="SelectReqBtnElevate0" x="4" y="3">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Elevate </text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:label id="8016" name="SelectReqLblDate0" x="5" y="3">
+                <align>middle centre</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqdate[0]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="8017" name="SelectReqLblStatus0" x="6" y="3">
+                <align>middle centre</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqstatus[0]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="8018" name="SelectReqLblRequester0" x="7" y="3">
+                <align>middle left</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqrequester[0]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> %%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="8020" name="SelectReqLblNumber1" rowspan="2" x="0" y="4">
+                <align>middle left</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqnumber[1]</binding>
+                <colour>#00FFCF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="7" id="8021" name="SelectReqLblRequestText1" x="1" y="4">
+                <align>middle left</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqrequesttext[1]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:button id="8022" name="SelectReqBtnSelect1" x="1" y="5">
+                <background>#AA000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Select </text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="8023" name="SelectReqBtnClaimTP1" x="2" y="5">
+                <background>#AA000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Claim&amp;TP </text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="8024" name="SelectReqBtnTeleport1" x="3" y="5">
+                <background>#AA000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Teleport </text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="8025" name="SelectReqBtnElevate1" x="4" y="5">
+                <background>#AA000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Elevate </text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:label id="8026" name="SelectReqLblDate1" x="5" y="5">
+                <align>middle centre</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqdate[1]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="8027" name="SelectReqLblStatus1" x="6" y="5">
+                <align>middle centre</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqstatus[1]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="8028" name="SelectReqLblRequester1" x="7" y="5">
+                <align>middle left</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqrequester[1]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> %%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="8030" name="SelectReqLblNumber2" rowspan="2" x="0" y="6">
+                <align>middle left</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqnumber[2]</binding>
+                <colour>#00FFCF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="7" id="8031" name="SelectReqLblRequestText2" x="1" y="6">
+                <align>middle left</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqrequesttext[2]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:button id="8032" name="SelectReqBtnSelect2" x="1" y="7">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Select </text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="8033" name="SelectReqBtnClaimTP2" x="2" y="7">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Claim&amp;TP </text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="8034" name="SelectReqBtnTeleport2" x="3" y="7">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Teleport </text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="8035" name="SelectReqBtnElevate2" x="4" y="7">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Elevate </text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:label id="8036" name="SelectReqLblDate2" x="5" y="7">
+                <align>middle centre</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqdate[2]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="8037" name="SelectReqLblStatus2" x="6" y="7">
+                <align>middle centre</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqstatus[2]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="8038" name="SelectReqLblRequester2" x="7" y="7">
+                <align>middle left</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqrequester[2]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> %%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="8040" name="SelectReqLblNumber3" rowspan="2" x="0" y="8">
+                <align>middle left</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqnumber[3]</binding>
+                <colour>#00FFCF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label colspan="7" id="8041" name="SelectReqLblRequestText3" x="1" y="8">
+                <align>middle left</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqrequesttext[3]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:button id="8042" name="SelectReqBtnSelect3" x="1" y="9">
+                <background>#AA000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Select </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8043" name="SelectReqBtnClaimTP3" x="2" y="9">
+                <background>#AA000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Claim&amp;TP </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8044" name="SelectReqBtnTeleport3" x="3" y="9">
+                <background>#AA000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Teleport </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8045" name="SelectReqBtnElevate3" x="4" y="9">
+                <background>#AA000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Elevate </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:label id="8046" name="SelectReqLblDate3" x="5" y="9">
+                <align>middle centre</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqdate[3]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label id="8047" name="SelectReqLblStatus3" x="6" y="9">
+                <align>middle centre</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqstatus[3]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label id="8048" name="SelectReqLblRequester3" x="7" y="9">
+                <align>middle left</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqrequester[3]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> %%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label id="8050" name="SelectReqLblNumber4" rowspan="2" x="0" y="10">
+                <align>middle left</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqnumber[4]</binding>
+                <colour>#00FFCF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label colspan="7" id="8051" name="SelectReqLblRequestText4" x="1" y="10">
+                <align>middle left</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqrequesttext[4]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:button id="8052" name="SelectReqBtnSelect4" x="1" y="11">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Select </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8053" name="SelectReqBtnClaimTP4" x="2" y="11">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Claim&amp;TP </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8054" name="SelectReqBtnTeleport4" x="3" y="11">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Teleport </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8055" name="SelectReqBtnElevate4" x="4" y="11">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Elevate </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:label id="8056" name="SelectReqLblDate4" x="5" y="11">
+                <align>middle centre</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqdate[4]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label id="8057" name="SelectReqLblStatus4" x="6" y="11">
+                <align>middle centre</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqstatus[4]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label id="8058" name="SelectReqLblRequester4" x="7" y="11">
+                <align>middle left</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqrequester[4]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> %%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label id="8060" name="SelectReqLblNumber5" rowspan="2" x="0" y="12">
+                <align>middle left</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqnumber[5]</binding>
+                <colour>#00FFCF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label colspan="7" id="8061" name="SelectReqLblRequestText5" x="1" y="12">
+                <align>middle left</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqrequesttext[5]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:button id="8062" name="SelectReqBtnSelect5" x="1" y="13">
+                <background>#AA000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Select </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8063" name="SelectReqBtnClaimTP5" x="2" y="13">
+                <background>#AA000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Claim&amp;TP </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8064" name="SelectReqBtnTeleport5" x="3" y="13">
+                <background>#AA000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Teleport </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8065" name="SelectReqBtnElevate5" x="4" y="13">
+                <background>#AA000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Elevate </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:label id="8066" name="SelectReqLblDate5" x="5" y="13">
+                <align>middle centre</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqdate[5]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label id="8067" name="SelectReqLblStatus5" x="6" y="13">
+                <align>middle centre</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqstatus[5]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label id="8068" name="SelectReqLblRequester5" x="7" y="13">
+                <align>middle left</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqrequester[5]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> %%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label id="8070" name="SelectReqLblNumber6" rowspan="2" x="0" y="14">
+                <align>middle left</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqnumber[6]</binding>
+                <colour>#00FFCF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label colspan="7" id="8071" name="SelectReqLblRequestText6" x="1" y="14">
+                <align>middle left</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqrequesttext[6]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:button id="8072" name="SelectReqBtnSelect6" x="1" y="15">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Select </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8073" name="SelectReqBtnClaimTP6" x="2" y="15">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Claim&amp;TP </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8074" name="SelectReqBtnTeleport6" x="3" y="15">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Teleport </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8075" name="SelectReqBtnElevate6" x="4" y="15">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Elevate </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:label id="8076" name="SelectReqLblDate6" x="5" y="15">
+                <align>middle centre</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqdate[6]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label id="8077" name="SelectReqLblStatus6" x="6" y="15">
+                <align>middle centre</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqstatus[6]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label id="8078" name="SelectReqLblRequester6" x="7" y="15">
+                <align>middle left</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqrequester[6]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> %%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label id="8080" name="SelectReqLblNumber7" rowspan="2" x="0" y="16">
+                <align>middle left</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqnumber[7]</binding>
+                <colour>#00FFCF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label colspan="7" id="8081" name="SelectReqLblRequestText7" x="1" y="16">
+                <align>middle left</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqrequesttext[7]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:button id="8082" name="SelectReqBtnSelect7" x="1" y="17">
+                <background>#AA000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Select </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8083" name="SelectReqBtnClaimTP7" x="2" y="17">
+                <background>#AA000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Claim&amp;TP </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8084" name="SelectReqBtnTeleport7" x="3" y="17">
+                <background>#AA000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Teleport </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8085" name="SelectReqBtnElevate7" x="4" y="17">
+                <background>#AA000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Elevate </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:label id="8086" name="SelectReqLblDate7" x="5" y="17">
+                <align>middle centre</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqdate[7]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label id="8087" name="SelectReqLblStatus7" x="6" y="17">
+                <align>middle centre</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqstatus[7]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label id="8088" name="SelectReqLblRequester7" x="7" y="17">
+                <align>middle left</align>
+                <background>#AA000000</background>
+                <binding>@&amp;selectreqrequester[7]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> %%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label id="8090" name="SelectReqLblNumber8" rowspan="2" x="0" y="18">
+                <align>middle left</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqnumber[8]</binding>
+                <colour>#00FFCF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label colspan="7" id="8091" name="SelectReqLblRequestText8" x="1" y="18">
+                <align>middle left</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqrequesttext[8]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:button id="8092" name="SelectReqBtnSelect8" x="1" y="19">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Select </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8093" name="SelectReqBtnClaimTP8" x="2" y="19">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Claim&amp;TP </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8094" name="SelectReqBtnTeleport8" x="3" y="19">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Teleport </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:button id="8095" name="SelectReqBtnElevate8" x="4" y="19">
+                <background>#AA464646</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text> Elevate </text>
+                <visible>0</visible>
+            </gc:button>
+            <gc:label id="8096" name="SelectReqLblDate8" x="5" y="19">
+                <align>middle centre</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqdate[8]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label id="8097" name="SelectReqLblStatus8" x="6" y="19">
+                <align>middle centre</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqstatus[8]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label id="8098" name="SelectReqLblRequester8" x="7" y="19">
+                <align>middle left</align>
+                <background>#AA464646</background>
+                <binding>@&amp;selectreqrequester[8]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> %%</text>
+                <visible>0</visible>
+            </gc:label>
+        </gc:controls>
+    </gc:guilayout>
