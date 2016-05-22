@@ -1,0 +1,2 @@
+# EVENT_ONCHAT
+Macro[1001].Macro=$${IFMATCHES(%CHATCLEAN%,^You are no longer in ModMode!);UNSET(@modmodestatus);ENDIF;IFMATCHES(%CHATCLEAN%,^You are now in ModMode!);SET(@modmodestatus);ENDIF;LogTo(chatdebug.txt,%CHAT%);}$$
