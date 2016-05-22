@@ -1,0 +1,82 @@
+IF(@querymodreqlist);
+	IFMATCHES(%CHATCLEAN%,^---- \d Mod Requests ----);
+		FILTER();
+	ENDIF;
+	IFMATCHES(%CHATCLEAN%,^\d+\.(?: \[\d+\])?(?: \[\w+\])? \[\w+\]);
+
+		MATCH(%CHATCLEAN%,^(\d+)\.,&linereqnumber,1);
+		@&selectreqnumber[] = %&linereqnumber%;
+
+		MATCH(%CHATCLEAN%,^\d+\.(?: \[\d+\])?(?: \[\w+\])? \[\w+\] (\w+\.\d{1\,2}@\d{2}:\d{2}:\d{2}),&linereqdate,1);
+		@&selectreqdate[] = %&linereqdate%;
+
+		MATCH(%CHATCLEAN%,^\d+\.(?: \[\d+\])?(?: \[\w+\])? \[(\w+)\],&linereqstatus,1);
+		@&selectreqstatus[] = %&linereqstatus%;
+
+		MATCH(%CHATCLEAN%,^\d+\.(?: \[\d+\])?(?: \[\w+\])? \[\w+\] \w+\.\d{1\,2}@\d{2}:\d{2}:\d{2} (\w+) -,&linereqplayer,1);
+		@&selectreqrequester[] = %&linereqplayer%;
+
+		MATCH(%CHATCLEAN%,^\d+\.(?: \[\d+\])?(?: \[\w+\])? \[\w+\] \w+\.\d{1\,2}@\d{2}:\d{2}:\d{2} \w+ - (.+),&linereqtext,1);
+		@&selectreqrequesttext[] = %&linereqtext%;
+
+		ARRAYSIZE(@&selectreqnumber[],#selectreqarraysize);
+		DEC(#selectreqarraysize);
+		SETPROPERTY(SelectReqLblNumber%#selectreqarraysize%,visible,1);
+		SETPROPERTY(SelectReqLblRequestText%#selectreqarraysize%,visible,1);
+		SETPROPERTY(SelectReqBtnSelect%#selectreqarraysize%,visible,1);
+		SETPROPERTY(SelectReqBtnClaimTP%#selectreqarraysize%,visible,1);
+		SETPROPERTY(SelectReqBtnTeleport%#selectreqarraysize%,visible,1);
+		SETPROPERTY(SelectReqBtnElevate%#selectreqarraysize%,visible,1);
+		SETPROPERTY(SelectReqLblDate%#selectreqarraysize%,visible,1);
+		SETPROPERTY(SelectReqLblStatus%#selectreqarraysize%,visible,1);
+		SETPROPERTY(SelectReqLblRequester%#selectreqarraysize%,visible,1);
+
+		FILTER();
+	ENDIF;
+	IFMATCHES(%CHATCLEAN%,^---- Page \d of \d ----);
+		IFMATCHES(%CHATCLEAN%,^---- Page 1 of 2 ----);
+			IF(@queryadminreqlist);
+				ECHO("/check -a p:2");
+				UNSET(@queryadminreqlist);
+			ELSE;
+				ECHO("/check p:2");
+			ENDIF;
+		ENDIF;
+		FILTER();
+	ENDIF;
+	IFMATCHES(%CHATCLEAN%,^There are currently no open mod requests.);
+		FILTER();
+	ENDIF;
+ENDIF;
+IF(@querycheckmodreq);
+	IF(@querymodreqtextline);
+		MATCH(%CHATCLEAN%,^(.+),&selectedmodreqtextmatch,1);
+		IFMATCHES(%&selectedmodreqtextmatch%,^(.{65}));
+			MATCH(%&selectedmodreqtextmatch%,^(.{60}),&selectedmodreqtextmatch1,1);
+			MATCH(%&selectedmodreqtextmatch%,^.{60}(.+),&selectedmodreqtextmatch2,1);
+			@&selectedmodreqtext = "%&selectedmodreqtextmatch1%\n %&selectedmodreqtextmatch2%";
+		ELSE;
+			@&selectedmodreqtext = %&selectedmodreqtextmatch%;
+		ENDIF;
+		UNSET(@querymodreqtextline);
+		FILTER();
+	ENDIF;
+	IFMATCHES(%CHATCLEAN%,^Filed by \w+ at \w+\.\d{1\,2}@\d{2}:\d{2}:\d{2} at \w+\, (?:-)?\d{1\,4}, (?:-)?\d{1\,4}, (?:-)?\d{1\,4});
+		MATCH(%CHATCLEAN%,^Filed by (\w+) ,@&selectedmodreqplayername,1);
+		MATCH(%CHATCLEAN%,^Filed by \w+ at (\w+\.\d{1\,2}@\d{2}:\d{2}:\d{2}) ,@&selectedmodreqdate,1);
+		MATCH(%CHATCLEAN%,^Filed by \w+ at \w+\.\d{1\,2}@\d{2}:\d{2}:\d{2} at (\w+\, .+),@&selectedmodreqlocation,1);
+		SET(@querymodreqtextline);
+		FILTER();
+	ENDIF;
+	IFMATCHES(%CHATCLEAN%,^  \[#\d{1} - \w+\] );
+		MATCH(%CHATCLEAN%,^  \[#\d{1} - \w+\] (.+),&selectedmodreqnotematch,1);
+		@&selectedmodreqnote[] = %&selectedmodreqnotematch%;
+		ARRAYSIZE(@&selectedmodreqnote[],#selectedmodreqarraysize);
+		DEC(#selectedmodreqarraysize);
+		SETPROPERTY(SelectedModReqLblNote%#selectedmodreqarraysize%,visible,1);
+		FILTER();
+	ENDIF;
+	IFMATCHES(%CHATCLEAN%,^Mod Request \d{1\,4} - );
+		FILTER();
+	ENDIF;
+ENDIF;
