@@ -1,0 +1,370 @@
+    <!-- Config for layout 'ModRequests' -->
+    <gc:guilayout columns="9" display="Mod Requests" dots="false" grid="false" name="ModRequests" padding="2" rows="14">
+        <gc:metrics>
+            <gc:column id="1" width="10"/>
+            <gc:column id="3" width="10"/>
+            <gc:column id="5" width="10"/>
+            <gc:column id="7" width="10"/>
+        </gc:metrics>
+        <gc:controls>
+            <!-- Header -->
+            <gc:label colspan="9" id="7000" name="ModReqestsLbl" x="0" y="0">
+                <align>middle centre</align>
+                <background>#003C68</background>
+                <binding/>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>Mod Requests</text>
+                <visible>1</visible>
+            </gc:label>
+            <!-- Select Reqs -->
+            <gc:label colspan="3" id="7001" name="ModReqestsLblSelectHeader" x="0" y="1">
+                <align>bottom left</align>
+                <background>#DEFFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text> List &amp; Choose Requests:</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:button id="7002" name="ModReqestsBtnModReqSelect" x="0" y="2">
+                <background>#B0000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Select Mod Req</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7003" name="ModReqestsBtnAdminReqSelect" x="0" y="3">
+                <background>#B0000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Select Admin Req</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7004" name="ModReqestsBtnListModReq" x="2" y="2">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>List Mod Reqs</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7005" name="ModReqestsBtnListAdminReq" x="2" y="3">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>List Admin Reqs</text>
+                <visible>1</visible>
+            </gc:button>
+            <!-- With Reqs -->
+            <gc:label colspan="3" id="7010" name="ModReqestsLblWithHeader" x="0" y="4">
+                <align>bottom left</align>
+                <background>#DEFFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text> With Selected Request:</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:button id="7011" name="ModReqestsBtnClaim" x="0" y="5">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Claim</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7012" name="ModReqestsBtnUnclaim" x="2" y="5">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Unclaim</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7013" name="ModReqestsBtnClaimTP" x="0" y="6">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Claim &amp; TP</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7014" name="ModReqestsBtnTeleport" x="2" y="6">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Teleport</text>
+                <visible>1</visible>
+            </gc:button>
+            <!-- Modify Reqs -->
+            <gc:label colspan="3" id="7020" name="ModReqestsLblModifyHeader" x="0" y="7">
+                <align>bottom left</align>
+                <background>#DEFFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text> Modify Request:</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:button id="7021" name="ModReqestsBtnDone" x="0" y="8">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Done</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7022" name="ModReqestsBtnAddNote" x="2" y="8">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Add Note</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7023" name="ModReqestsBtnReOpen" x="0" y="9">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Re-Open</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7024" name="ModReqestsBtnElevate" x="2" y="9">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Elevate</text>
+                <visible>1</visible>
+            </gc:button>
+            <!-- ModMode -->
+            <gc:label colspan="3" id="7030" name="ModReqestsLblModMode" x="0" y="10">
+                <align>bottom left</align>
+                <background>#FFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text> ModMode:</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:button id="7031" name="ToggleModMode" x="0" y="11">
+                <background>#B0000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Enter ModMode</text>
+                <visible>1</visible>
+            </gc:button>
+            <!-- Selected Info -->
+            <gc:label colspan="5" id="7041" name="ModReqestsLblInfoHeader" x="4" y="1">
+                <align>bottom left</align>
+                <background>#DEFFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text> Selected Request Info:</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="5" id="7042" name="ModReqestsLblNumDisplay" x="4" y="2">
+                <align>middle centre</align>
+                <background>#84000000</background>
+                <binding>@&amp;currentreqnumber</binding>
+                <colour>#00C3FF</colour>
+                <shadow>0</shadow>
+                <text>Currently Handling Request #%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="2" id="7043" name="SelectedModReqLblPlayerHeader" x="4" y="3">
+                <align>bottom left</align>
+                <background>#FFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text> Player:</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="2" id="7044" name="SelectedModReqLblPlayer" x="4" y="4">
+                <align>middle left</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqplayername</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> %%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="7045" name="SelectedModReqLblDateHeader" x="6" y="3">
+                <align>bottom centre</align>
+                <background>#FFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text>Date: </text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="7046" name="SelectedModReqLblDate" x="6" y="4">
+                <align>middle centre</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqdate</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="2" id="7047" name="SelectedModReqLblLocHeader" x="7" y="3">
+                <align>bottom right</align>
+                <background>#FFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text>Location: </text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="2" id="7048" name="SelectedModReqLblLoc" x="7" y="4">
+                <align>middle right</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqlocation</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>%%</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label colspan="5" id="7049" name="SelectedModReqLblText" x="4" y="5">
+                <align>middle left</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqtext</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> Text: %%</text>
+                <visible>1</visible>
+            </gc:label>
+            <!-- Selected Info Notes -->
+            <gc:label colspan="5" id="7050" name="SelectedModReqLblNote0" x="4" y="6">
+                <align>middle left</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqnote[0]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> Note #1: %%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label colspan="5" id="7051" name="SelectedModReqLblNote1" x="4" y="7">
+                <align>middle left</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqnote[1]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> Note #2: %%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label colspan="5" id="7052" name="SelectedModReqLblNote2" x="4" y="8">
+                <align>middle left</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqnote[2]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> Note #3: %%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label colspan="5" id="7053" name="SelectedModReqLblNote3" x="4" y="9">
+                <align>middle left</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqnote[3]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> Note #4: %%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label colspan="5" id="7054" name="SelectedModReqLblNote4" x="4" y="10">
+                <align>middle left</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqnote[4]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> Note #5: %%</text>
+                <visible>0</visible>
+            </gc:label>
+            <gc:label colspan="5" id="7055" name="SelectedModReqLblNote5" x="4" y="11">
+                <align>middle left</align>
+                <background>#DE000000</background>
+                <binding>@&amp;selectedmodreqnote[5]</binding>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text> Note #6: %%</text>
+                <visible>0</visible>
+            </gc:label>
+            <!-- Switch Screen -->
+            <gc:label colspan="9" id="7060" name="ModReqestsLblSwitchScreen" x="0" y="12">
+                <align>bottom left</align>
+                <background>#DEFFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text> Switch to Screen:</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:button id="7061" name="ModReqestsBtnScreenRegions" x="0" y="13">
+                <background>#DE000000</background>
+                <colour>#C700FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Regions</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7062" name="ModReqestsBtnScreenEasySigns" x="2" y="13">
+                <background>#B0000000</background>
+                <colour>#00FF00</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Easy Signs</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7063" name="ModReqestsBtnScreenPlayerModeration" x="4" y="13">
+                <background>#DE000000</background>
+                <colour>#F7FF00</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Player Moderation</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7064" name="ModReqestsBtnScreenGriefing" x="6" y="13">
+                <background>#DE000000</background>
+                <colour>#FF9B00</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Griefing</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7065" name="ModReqestsBtnScreenXRay" x="8" y="13">
+                <background>#B0000000</background>
+                <colour>#FF0000</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>X-Ray</text>
+                <visible>1</visible>
+            </gc:button>
+        </gc:controls>
+    </gc:guilayout>
