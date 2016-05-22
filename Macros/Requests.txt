@@ -1,0 +1,263 @@
+List & Choose Requests:
+	Select Mod Req
+		$${
+			SET(@querymodreqlist);
+			UNSET(@&selectreqnumber[]);
+			UNSET(@&selectreqdate[]);
+			UNSET(@&selectreqstatus[]);
+			UNSET(@&selectreqrequester[]);
+			UNSET(@&selectreqrequesttext[]);
+			FOR(#i = 0 to 8);
+				SETPROPERTY(SelectReqLblNumber%#i%,visible,0);
+				SETPROPERTY(SelectReqLblRequestText%#i%,visible,0);
+				SETPROPERTY(SelectReqBtnSelect%#i%,visible,0);
+				SETPROPERTY(SelectReqBtnClaimTP%#i%,visible,0);
+				SETPROPERTY(SelectReqBtnTeleport%#i%,visible,0);
+				SETPROPERTY(SelectReqBtnElevate%#i%,visible,0);
+				SETPROPERTY(SelectReqLblDate%#i%,visible,0);
+				SETPROPERTY(SelectReqLblStatus%#i%,visible,0);
+				SETPROPERTY(SelectReqLblRequester%#i%,visible,0);
+			NEXT;
+			ECHO("/check");
+			SHOWGUI("SelectReq");
+			WAIT(1000ms);
+			UNSET(@querymodreqlist);
+		}$$
+	Select Admin Req
+		$${
+			SET(@querymodreqlist);
+			SET(@queryadminreqlist);
+			UNSET(@&selectreqnumber[]);
+			UNSET(@&selectreqdate[]);
+			UNSET(@&selectreqstatus[]);
+			UNSET(@&selectreqrequester[]);
+			UNSET(@&selectreqrequesttext[]);
+			FOR(#i = 0 to 8);
+				SETPROPERTY(SelectReqLblNumber%#i%,visible,0);
+				SETPROPERTY(SelectReqLblRequestText%#i%,visible,0);
+				SETPROPERTY(SelectReqBtnSelect%#i%,visible,0);
+				SETPROPERTY(SelectReqBtnClaimTP%#i%,visible,0);
+				SETPROPERTY(SelectReqBtnTeleport%#i%,visible,0);
+				SETPROPERTY(SelectReqBtnElevate%#i%,visible,0);
+				SETPROPERTY(SelectReqLblDate%#i%,visible,0);
+				SETPROPERTY(SelectReqLblStatus%#i%,visible,0);
+				SETPROPERTY(SelectReqLblRequester%#i%,visible,0);
+			NEXT;
+			ECHO("/check -a");
+			SHOWGUI("SelectReq");
+			WAIT(1000ms);
+			UNSET(@querymodreqlist);
+		}$$
+
+	List Mod Reqs
+		/check
+
+	List Admin Reqs
+		/check -a
+
+With Selected Request:
+
+	Claim
+	$${
+		IF(%@&currentreqnumber%="");
+			LOG(No Mod Reqest Number Selected);
+		ELSE;
+			ECHO("/claim %@&currentreqnumber%");
+			SHOWGUI(ModRequests);
+		ENDIF;
+	}$$
+
+	Unclaim
+	$${
+		IF(%@&currentreqnumber%="");
+			LOG(No Mod Reqest Number Selected);
+		ELSE;
+			ECHO("/unclaim %@&currentreqnumber%");
+			SHOWGUI(ModRequests);
+		ENDIF;
+	}$$
+
+	Claim & TP
+	$${
+		IF(%@&currentreqnumber%="");
+			LOG(No Mod Reqest Number Selected);
+		ELSE;
+			IF(@modmodestatus);
+			ELSE;
+				ECHO("/modmode");
+				SETPROPERTY(ToggleModMode,text,"Exit ModMode");
+				WAIT(100ms);
+				ECHO("/sethome");
+				WAIT(100ms);
+			ENDIF;
+			ECHO("/tpc %@&currentreqnumber%");
+		ENDIF;
+	}$$
+
+	Teleport
+	$${
+		IF(%@&currentreqnumber%="");
+			LOG(No Mod Reqest Number Selected);
+		ELSE;
+			IF(@modmodestatus);
+			ELSE;
+				ECHO("/modmode");
+				SETPROPERTY(ToggleModMode,text,"Exit ModMode");
+				WAIT(100ms);
+				ECHO("/sethome");
+				WAIT(100ms);
+			ENDIF;
+			ECHO("/tp-id %@&currentreqnumber%");
+		ENDIF;
+	}$$
+
+Modify Request:
+
+	Done
+	$${
+		IF(%@&currentreqnumber%="");
+			LOG(No Mod Reqest Number Selected);
+		ELSE;
+			PROMPT(&message,$$[Message],Enter ModReq Close Message,false,);
+			IF(%&message%="");
+				LOG("No Message Entered. Canceling /done");
+			ELSE;
+				ECHO("/done %@&currentreqnumber% %&message%");
+				@&closedreqnumber=%@&currentreqnumber%;
+				UNSET(@&currentreqnumber);
+				UNSET(@&selectedmodreqnote[]);
+				UNSET(@&selectedmodreqplayername);
+				UNSET(@&selectedmodreqdate);
+				UNSET(@&selectedmodreqlocation);
+				UNSET(@&selectedmodreqtext);
+				FOR(#i = 0 to 5);
+					SETPROPERTY(SelectedModReqLblNote%#i%,visible,0);
+				NEXT;
+			ENDIF;
+		ENDIF;
+	}$$
+
+	Add Req Note
+	$${
+		IF(%@&currentreqnumber%="");
+			LOG(No Mod Reqest Number Selected);
+		ELSE;
+			PROMPT(&note,$$[Note],Enter the Request Note Message,false,);
+			IF(%&note%="");
+				LOG("No Note Entered");
+			ELSE;
+				ECHO("/mr-note add %@&currentreqnumber% %&note%");
+				SET(@querycheckmodreq);
+				UNSET(@&selectedmodreqnote[]);
+				FOR(#i = 0 to 5);
+					SETPROPERTY(SelectedModReqLblNote%#i%,visible,0);
+				NEXT;
+				ECHO("/check %@&currentreqnumber%");
+				WAIT(1000ms);
+				UNSET(@querycheckmodreq);
+			ENDIF;
+		ENDIF;
+	}$$
+
+	Re-Open
+	$${
+		PROMPT(&reqnumber,$$[Number[%@&closedreqnumber%]],Enter a Mod Request Number,false,);
+		IF(%&reqnumber%="");
+			LOG(No Mod Reqest Number Selected);
+		ELSE;
+			@&currentreqnumber = %&reqnumber%;
+			ECHO("/reopen %@&currentreqnumber%");
+			SET(@querycheckmodreq);
+			UNSET(@&selectedmodreqnote[]);
+			FOR(#i = 0 to 5);
+				SETPROPERTY(SelectedModReqLblNote%#i%,visible,0);
+			NEXT;
+			ECHO("/check %@&currentreqnumber%");
+			WAIT(1000ms);
+			UNSET(@querycheckmodreq);
+			SHOWGUI(ModRequests);
+		ENDIF;
+	}$$
+
+	Elevate
+	$${
+		IF(%@&currentreqnumber%="");
+			LOG("No Mod Reqest Number Selected");
+		ELSE;
+			ECHO("/elevate %@&currentreqnumber%");
+			UNSET(@&currentreqnumber);
+			UNSET(@&selectedmodreqnote[]);
+			UNSET(@&selectedmodreqplayername);
+			UNSET(@&selectedmodreqdate);
+			UNSET(@&selectedmodreqlocation);
+			UNSET(@&selectedmodreqtext);
+			FOR(#i = 0 to 5);
+				SETPROPERTY(SelectedModReqLblNote%#i%,visible,0);
+			NEXT;
+		ENDIF;
+	}$$
+
+ModMode:
+
+	Toggle ModMode
+	$${
+		IF(@modmodestatus);
+			ECHO("/home");
+			SETPROPERTY(ToggleModMode,text,"Enter ModMode");
+			WAIT(1000ms);
+			ECHO("/modmode");
+			LOG("Exiting ModMode");
+		ELSE;
+			ECHO("/modmode");
+			SETPROPERTY(ToggleModMode,text,"Exit ModMode");
+			WAIT(100ms);
+			ECHO("/sethome");
+			SHOWGUI(ModRequests);
+			LOG("Entering ModMode");
+		ENDIF;
+	}$$
+
+
+
+Not Currently Used:
+
+	Select Mod Req
+	$${
+		ECHO("/check");
+		PROMPT(&reqnumber,$$[Number[%@&currentreqnumber%\,%@&newestreqnumber%]],"Choose a Mod Request",false,);
+		IF(%&reqnumber%="");
+			LOG(No Mod Reqest Number Entered);
+		ELSE;
+			@&currentreqnumber=%&reqnumber%;
+			SHOWGUI(ModRequests);
+		ENDIF;
+	}$$
+
+	Check
+	$${
+		IF(%@&currentreqnumber%="");
+			LOG(No Mod Reqest Number Selected);
+		ELSE;
+			ECHO("/check %@&currentreqnumber%");
+		ENDIF;
+	}$$
+
+	Enter ModMode
+	$${
+		IF(@modmodestatus);
+		ELSE;
+			ECHO("/modmode");
+			WAIT(100ms);
+			ECHO("/sethome");
+			SHOWGUI(ModRequests);
+		ENDIF;
+	}$$
+
+	Exit ModMode
+	$${
+		IF(@modmodestatus);
+			ECHO("/home");
+			WAIT(1000ms);
+			ECHO("/modmode");
+		ENDIF;
+	}$$
