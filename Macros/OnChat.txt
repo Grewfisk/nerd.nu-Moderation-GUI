@@ -1,2 +1,14 @@
-# EVENT_ONCHAT
-Macro[1001].Macro=$${IFMATCHES(%CHATCLEAN%,^You are no longer in ModMode!);UNSET(@modmodestatus);ENDIF;IFMATCHES(%CHATCLEAN%,^You are now in ModMode!);SET(@modmodestatus);ENDIF;LogTo(chatdebug.txt,%CHAT%);}$$
+OnChat
+	$${
+		IFMATCHES(%CHATCLEAN%,^You are no longer in ModMode!);
+			UNSET(@modmodestatus);
+		ENDIF;
+		IFMATCHES(%CHATCLEAN%,^You are now in ModMode!);
+			SET(@modmodestatus);
+		ENDIF;
+		IFMATCHES(%CHATCLEAN%,^New request\. Type /check [0-9][0-9][0-9][0-9] for more information\.);
+			MATCH(%CHATCLEAN%,[0-9][0-9][0-9][0-9],@&newestreqnumber);
+			ECHO(/check %@&newestreqnumber%);
+		ENDIF;
+		LogTo(chatdebug.txt,%CHAT%);
+	}$$
