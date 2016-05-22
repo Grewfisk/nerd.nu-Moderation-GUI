@@ -1,0 +1,38 @@
+# CONTROL_MODREQESTSBTNMODREQSELECT
+Macro[7002].Macro=$${SET(@querymodreqlist);UNSET(@&selectreqnumber[]);UNSET(@&selectreqdate[]);UNSET(@&selectreqstatus[]);UNSET(@&selectreqrequester[]);UNSET(@&selectreqrequesttext[]);FOR(#i = 0 to 8);SETPROPERTY(SelectReqLblNumber%#i%,visible,0);SETPROPERTY(SelectReqLblRequestText%#i%,visible,0);SETPROPERTY(SelectReqBtnSelect%#i%,visible,0);SETPROPERTY(SelectReqBtnClaimTP%#i%,visible,0);SETPROPERTY(SelectReqBtnTeleport%#i%,visible,0);SETPROPERTY(SelectReqBtnElevate%#i%,visible,0);SETPROPERTY(SelectReqLblDate%#i%,visible,0);SETPROPERTY(SelectReqLblStatus%#i%,visible,0);SETPROPERTY(SelectReqLblRequester%#i%,visible,0);NEXT;ECHO("/check");SHOWGUI("SelectReq");WAIT(1000ms);UNSET(@querymodreqlist);}$$
+
+# CONTROL_MODREQESTSBTNADMINREQSELECT
+Macro[7003].Macro=$${SET(@querymodreqlist);SET(@queryadminreqlist);UNSET(@&selectreqnumber[]);UNSET(@&selectreqdate[]);UNSET(@&selectreqstatus[]);UNSET(@&selectreqrequester[]);UNSET(@&selectreqrequesttext[]);FOR(#i = 0 to 8);SETPROPERTY(SelectReqLblNumber%#i%,visible,0);SETPROPERTY(SelectReqLblRequestText%#i%,visible,0);SETPROPERTY(SelectReqBtnSelect%#i%,visible,0);SETPROPERTY(SelectReqBtnClaimTP%#i%,visible,0);SETPROPERTY(SelectReqBtnTeleport%#i%,visible,0);SETPROPERTY(SelectReqBtnElevate%#i%,visible,0);SETPROPERTY(SelectReqLblDate%#i%,visible,0);SETPROPERTY(SelectReqLblStatus%#i%,visible,0);SETPROPERTY(SelectReqLblRequester%#i%,visible,0);NEXT;ECHO("/check -a");SHOWGUI("SelectReq");WAIT(1000ms);UNSET(@querymodreqlist);}$$
+
+# CONTROL_MODREQESTSBTNLISTMODREQ
+Macro[7004].Macro=/check
+
+# CONTROL_MODREQESTSBTNLISTADMINREQ
+Macro[7005].Macro=/check -a
+
+# CONTROL_MODREQESTSBTNCLAIM
+Macro[7011].Macro=$${IF(%@&currentreqnumber%="");LOG(No Mod Reqest Number Selected);ELSE;ECHO("/claim %@&currentreqnumber%");SHOWGUI(ModRequests);ENDIF;}$$
+
+# CONTROL_MODREQESTSBTNUNCLAIM
+Macro[7012].Macro=$${IF(%@&currentreqnumber%="");LOG(No Mod Reqest Number Selected);ELSE;ECHO("/unclaim %@&currentreqnumber%");SHOWGUI(ModRequests);ENDIF;}$$
+
+# CONTROL_MODREQESTSBTNCLAIMTP
+Macro[7013].Macro=$${IF(%@&currentreqnumber%="");LOG(No Mod Reqest Number Selected);ELSE;IF(@modmodestatus);ELSE;ECHO("/modmode");SETPROPERTY(ToggleModMode,text,"Exit ModMode");WAIT(100ms);ECHO("/sethome");WAIT(100ms);ENDIF;ECHO("/tpc %@&currentreqnumber%");ENDIF;}$$
+
+# CONTROL_MODREQESTSBTNTELEPORT
+Macro[7014].Macro=$${IF(%@&currentreqnumber%="");LOG(No Mod Reqest Number Selected);ELSE;IF(@modmodestatus);ELSE;ECHO("/modmode");SETPROPERTY(ToggleModMode,text,"Exit ModMode");WAIT(100ms);ECHO("/sethome");WAIT(100ms);ENDIF;ECHO("/tp-id %@&currentreqnumber%");ENDIF;}$$
+
+# CONTROL_MODREQESTSBTNDONE
+Macro[7021].Macro=$${IF(%@&currentreqnumber%="");LOG(No Mod Reqest Number Selected);ELSE;PROMPT(&message,$$[Message],Enter ModReq Close Message,false,);IF(%&message%="");LOG("No Message Entered. Canceling /done");ELSE;ECHO("/done %@&currentreqnumber% %&message%");@&closedreqnumber=%@&currentreqnumber%;UNSET(@&currentreqnumber);UNSET(@&selectedmodreqnote[]);UNSET(@&selectedmodreqplayername);UNSET(@&selectedmodreqdate);UNSET(@&selectedmodreqlocation);UNSET(@&selectedmodreqtext);FOR(#i = 0 to 5);SETPROPERTY(SelectedModReqLblNote%#i%,visible,0);NEXT;ENDIF;ENDIF;}$$
+
+# CONTROL_MODREQESTSBTNADDNOTE
+Macro[7022].Macro=$${IF(%@&currentreqnumber%="");LOG(No Mod Reqest Number Selected);ELSE;PROMPT(&note,$$[Note],Enter the Request Note Message,false,);IF(%&note%="");LOG("No Note Entered");ELSE;ECHO("/mr-note add %@&currentreqnumber% %&note%");SET(@querycheckmodreq);UNSET(@&selectedmodreqnote[]);FOR(#i = 0 to 5);SETPROPERTY(SelectedModReqLblNote%#i%,visible,0);NEXT;ECHO("/check %@&currentreqnumber%");WAIT(1000ms);UNSET(@querycheckmodreq);ENDIF;ENDIF;}$$
+
+# CONTROL_MODREQESTSBTNREOPEN
+Macro[7023].Macro=$${PROMPT(&reqnumber,$$[Number[%@&closedreqnumber%]],Enter a Mod Request Number,false,);IF(%&reqnumber%="");LOG(No Mod Reqest Number Selected);ELSE;@&currentreqnumber = %&reqnumber%;ECHO("/reopen %@&currentreqnumber%");SET(@querycheckmodreq);UNSET(@&selectedmodreqnote[]);FOR(#i = 0 to 5);SETPROPERTY(SelectedModReqLblNote%#i%,visible,0);NEXT;ECHO("/check %@&currentreqnumber%");WAIT(1000ms);UNSET(@querycheckmodreq);SHOWGUI(ModRequests);ENDIF;}$$
+
+# CONTROL_MODREQESTSBTNELEVATE
+Macro[7024].Macro=$${IF(%@&currentreqnumber%="");LOG("No Mod Reqest Number Selected");ELSE;ECHO("/elevate %@&currentreqnumber%");UNSET(@&currentreqnumber);UNSET(@&selectedmodreqnote[]);UNSET(@&selectedmodreqplayername);UNSET(@&selectedmodreqdate);UNSET(@&selectedmodreqlocation);UNSET(@&selectedmodreqtext);FOR(#i = 0 to 5);SETPROPERTY(SelectedModReqLblNote%#i%,visible,0);NEXT;ENDIF;}$$
+
+# CONTROL_TOGGLEMODMODE
+Macro[7031].Macro=$${IF(@modmodestatus);ECHO("/home");SETPROPERTY(ToggleModMode,text,"Enter ModMode");WAIT(1000ms);ECHO("/modmode");LOG("Exiting ModMode");ELSE;ECHO("/modmode");SETPROPERTY(ToggleModMode,text,"Exit ModMode");WAIT(100ms);ECHO("/sethome");SHOWGUI(ModRequests);LOG("Entering ModMode");ENDIF;}$$
