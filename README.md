@@ -13,5 +13,5 @@ Download the Manual Install then see [this page](https://github.com/Grewfisk/ner
 #### If you have not used macro mod before:
 Install macromod from [here](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1275039-macro-keybind-mod) then copy the contents of Nerd.nu.Moderation.GUI.r2.zip into your minecraft folder. Open the GUI in-game by pressing the ~ key.
 
-Changelog:
+#### Changelog:
 * Fixed an issue with reopening modreqs when there wasn't any previously closed by user.
