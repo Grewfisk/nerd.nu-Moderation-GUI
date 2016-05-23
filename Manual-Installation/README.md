@@ -1,6 +1,9 @@
+![Demo](https://raw.githubusercontent.com/Grewfisk/nerd.nu-Moderation-GUI/master/images/demo.png)
 # Installation Instructions
 If you're using windows, save your sanity and install Notepad ++. Or use notepad if you're a masochist.
-![Demo](https://raw.githubusercontent.com/Grewfisk/nerd.nu-Moderation-GUI/master/images/demo.png)
+
+Download the newest release. You want the manual install version.
+https://github.com/Grewfisk/nerd.nu-Moderation-GUI/releases
 
 ##### If you only have keyboard bindings and no GUI buttons/labels:
 1. Ensure Minecraft is closed. It will overwrite the files you're editing on exit.
