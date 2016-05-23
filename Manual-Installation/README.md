@@ -1,5 +1,5 @@
 # Installation Instructions
-* If you're on windows save your sanity and install Notepad ++. Or use notepad if you're a masochist.
+If you're using windows, save your sanity and install Notepad ++. Or use notepad if you're a masochist.
 
 ##### If you only have keyboard bindings and no GUI buttons/labels:
 1. Ensure Minecraft is closed. It will overwrite the files you're editing on exit.
