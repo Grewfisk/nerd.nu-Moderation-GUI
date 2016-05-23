@@ -161,7 +161,7 @@ Modify Request:
 
 	Re-Open
 	$${
-		PROMPT(&reqnumber,$$[Number[%@&closedreqnumber%]],Enter a Mod Request Number,false,);
+		PROMPT(&reqnumber,$$[Number[%@&closedreqnumber%\,]],Enter a Mod Request Number,false,);
 		IF(%&reqnumber%="");
 			LOG(No Mod Reqest Number Selected);
 		ELSE;
@@ -173,9 +173,9 @@ Modify Request:
 				SETPROPERTY(SelectedModReqLblNote%#i%,visible,0);
 			NEXT;
 			ECHO("/check %@&currentreqnumber%");
+			SHOWGUI(ModRequests);
 			WAIT(1000ms);
 			UNSET(@querycheckmodreq);
-			SHOWGUI(ModRequests);
 		ENDIF;
 	}$$
 
