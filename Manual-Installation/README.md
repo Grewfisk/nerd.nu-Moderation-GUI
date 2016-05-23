@@ -15,13 +15,13 @@
 2. Open the macromod settings folder at .minecraft/liteconfig/common/macros/
 3. Copy the .chatfilter.txt file from the downloaded zip into the macros directory, replacing the existing file.
 5. Open .minecraft/liteconfig/common/macros/.gui.xml in a text editor.
-6.Paste the contents of .gui.xml from the zip file at the bottom of the file, on the line above `</gui>` and the line below `</gc:guilayout>`. Save the file. ![Paste between the tags on a new line](https://raw.githubusercontent.com/Grewfisk/nerd.nu-Moderation-GUI/master/images/editguixml.png)
+6.Paste the contents of .gui.xml from the zip file at the bottom of the file, on the line above `</gui>` and the line below `</gc:guilayout>`. Save the file.<br />![Paste between the tags on a new line](https://raw.githubusercontent.com/Grewfisk/nerd.nu-Moderation-GUI/master/images/editguixml.png)
 7. Open .minecraft/liteconfig/common/macros/.macros.txt in a text editor.
 8. Paste the contents of .macros.txt from the zip file at the bottom of the file and save the file.
 9. Start up minecraft and press the [~] key to open macro mod.
-10. Click the "Edit key bindings" icon.  ![Edit key bindings](https://raw.githubusercontent.com/Grewfisk/nerd.nu-Moderation-GUI/master/images/editkeybindings.png)
-11. Click the "GUI Editor" icon ![GUI Editor](https://raw.githubusercontent.com/Grewfisk/nerd.nu-Moderation-GUI/master/images/guieditor.png)
-12. Find "Mod Requests" in the list of available screens ![Available screens](https://raw.githubusercontent.com/Grewfisk/nerd.nu-Moderation-GUI/master/images/availablescreens.png)
-13. Drag and drop it into the "playback" slot, replacing default ![playback default](https://raw.githubusercontent.com/Grewfisk/nerd.nu-Moderation-GUI/master/images/playbackdefault.png)
+10. Click the "Edit key bindings" icon.<br />![Edit key bindings](https://raw.githubusercontent.com/Grewfisk/nerd.nu-Moderation-GUI/master/images/editkeybindings.png)
+11. Click the "GUI Editor" icon<br />![GUI Editor](https://raw.githubusercontent.com/Grewfisk/nerd.nu-Moderation-GUI/master/images/guieditor.png)
+12. Find "Mod Requests" in the list of available screens<br />![Available screens](https://raw.githubusercontent.com/Grewfisk/nerd.nu-Moderation-GUI/master/images/availablescreens.png)
+13. Drag and drop it into the "playback" slot, replacing default<br />![playback default](https://raw.githubusercontent.com/Grewfisk/nerd.nu-Moderation-GUI/master/images/playbackdefault.png)
 14. Hit OK and exit out of macromod
 15. Press [~] again and now you should see the Requests Screen.
