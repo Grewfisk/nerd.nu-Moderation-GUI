@@ -8,10 +8,14 @@ MacroMod GUI scripts for moderation on Nerd.nu Minecraft servers
 https://github.com/Grewfisk/nerd.nu-Moderation-GUI/releases
 
 #### If you already have existing macros:
-Download the Manual Install then see [this page](https://github.com/Grewfisk/nerd.nu-Moderation-GUI/blob/master/Manual-Installation.md) for instructions.
+Download the Manual Install zip then see [this page](https://github.com/Grewfisk/nerd.nu-Moderation-GUI/blob/master/Manual-Installation.md) for instructions.
 
 #### If you have not used macro mod before:
-Install macromod from [here](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1275039-macro-keybind-mod) then copy the contents of Nerd.nu.Moderation.GUI.r2.zip into your minecraft folder. Open the GUI in-game by pressing the ~ key.
+Install macromod from [here](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1275039-macro-keybind-mod). Download the regular zip. Copy the contents of the zip archive into your minecraft folder. Open the GUI in-game by pressing the ~ key.
 
 #### Changelog:
+###### r3
+* Fixed packaging mistake that caused the GUI to not load correctly.
+
+###### r2
 * Fixed an issue with reopening modreqs when there wasn't any previously closed by user.
