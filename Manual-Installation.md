@@ -1,5 +1,4 @@
-![Demo](https://raw.githubusercontent.com/Grewfisk/nerd.nu-Moderation-GUI/master/images/demo.png)
-# Installation Instructions
+# Manual Installation Instructions
 If you're using windows, save your sanity and install Notepad ++. Or use notepad if you're a masochist.
 
 Download the newest release. You want the manual install version.
