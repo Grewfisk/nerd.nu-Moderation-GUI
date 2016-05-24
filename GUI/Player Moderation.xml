@@ -1,0 +1,76 @@
+    <!-- Config for layout 'PlayerModeration' -->
+    <gc:guilayout columns="9" display="Player Moderation" dots="false" grid="false" name="PlayerModeration" padding="2" rows="14">
+        <gc:metrics>
+            <gc:column id="1" width="10"/>
+            <gc:column id="3" width="10"/>
+            <gc:column id="5" width="10"/>
+            <gc:column id="7" width="10"/>
+        </gc:metrics>
+        <gc:controls>
+            <!-- Header -->
+            <gc:label colspan="9" id="7300" name="PlayerModerationLbl" x="0" y="0">
+                <align>middle centre</align>
+                <background>#F7FF00</background>
+                <binding/>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>Player Moderation</text>
+                <visible>1</visible>
+            </gc:label>
+            <!-- Switch Screen -->
+            <gc:label colspan="9" id="7390" name="PlayerModerationLblSwitchScreen" x="0" y="12">
+                <align>bottom left</align>
+                <background>#DEFFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text> Switch to Screen:</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:button id="7391" name="PlayerModerationBtnScreenRequests" x="0" y="13">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Requests</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7392" name="PlayerModerationBtnScreenRegions" x="0" y="13">
+                <background>#DE000000</background>
+                <colour>#C700FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Regions</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7393" name="PlayerModerationBtnScreenEasySigns" x="2" y="13">
+                <background>#B0000000</background>
+                <colour>#00FF00</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Easy Signs</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7394" name="PlayerModerationBtnScreenGriefing" x="6" y="13">
+                <background>#DE000000</background>
+                <colour>#FF9B00</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Griefing</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7395" name="PlayerModerationBtnScreenXRay" x="8" y="13">
+                <background>#B0000000</background>
+                <colour>#FF0000</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>X-Ray</text>
+                <visible>1</visible>
+            </gc:button>
+        </gc:controls>
+    </gc:guilayout>
