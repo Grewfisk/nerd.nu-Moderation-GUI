@@ -1,0 +1,76 @@
+    <!-- Config for layout 'EasySigns' -->
+    <gc:guilayout columns="9" display="Easy Signs" dots="false" grid="false" name="EasySigns" padding="2" rows="14">
+        <gc:metrics>
+            <gc:column id="1" width="10"/>
+            <gc:column id="3" width="10"/>
+            <gc:column id="5" width="10"/>
+            <gc:column id="7" width="10"/>
+        </gc:metrics>
+        <gc:controls>
+            <!-- Header -->
+            <gc:label colspan="9" id="7100" name="EasySignsLbl" x="0" y="0">
+                <align>middle centre</align>
+                <background>#00FF00</background>
+                <binding/>
+                <colour>#FFFFFF</colour>
+                <shadow>0</shadow>
+                <text>Easy Signs</text>
+                <visible>1</visible>
+            </gc:label>
+            <!-- Switch Screen -->
+            <gc:label colspan="9" id="7190" name="EasySignsLblSwitchScreen" x="0" y="12">
+                <align>bottom left</align>
+                <background>#DEFFFFFF</background>
+                <binding/>
+                <colour>#000000</colour>
+                <shadow>0</shadow>
+                <text> Switch to Screen:</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:button id="7191" name="EasySignsBtnScreenRequests" x="0" y="13">
+                <background>#DE000000</background>
+                <colour>#0093FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Requests</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7061" name="EasySignsBtnScreenRegions" x="0" y="13">
+                <background>#DE000000</background>
+                <colour>#C700FF</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Regions</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7193" name="EasySignsBtnScreenPlayerModeration" x="4" y="13">
+                <background>#DE000000</background>
+                <colour>#F7FF00</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Player Moderation</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7194" name="EasySignsBtnScreenGriefing" x="6" y="13">
+                <background>#DE000000</background>
+                <colour>#FF9B00</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>Griefing</text>
+                <visible>1</visible>
+            </gc:button>
+            <gc:button id="7195" name="EasySignsBtnScreenXRay" x="8" y="13">
+                <background>#B0000000</background>
+                <colour>#FF0000</colour>
+                <hide>0</hide>
+                <hotkey>0</hotkey>
+                <sticky>0</sticky>
+                <text>X-Ray</text>
+                <visible>1</visible>
+            </gc:button>
+        </gc:controls>
+    </gc:guilayout>
