@@ -1,5 +1,5 @@
-    <!-- Config for layout 'ModRequests' -->
-    <gc:guilayout columns="9" display="Mod Requests" dots="false" grid="false" name="ModRequests" padding="2" rows="14">
+    <!-- Config for layout 'Requests' -->
+    <gc:guilayout columns="9" display="Mod Requests" dots="false" grid="false" name="Requests" padding="2" rows="14">
         <gc:metrics>
             <gc:column id="1" width="10"/>
             <gc:column id="3" width="10"/>
