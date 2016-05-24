@@ -216,7 +216,16 @@ ModMode:
 			LOG("Entering ModMode");
 		ENDIF;
 	}$$
-
+Requester:
+	Message Player
+	$${
+		PROMPT(&message,$$[Message],Enter Message to Player,false,);
+		IF(%&message% = "");
+			LOG("No message to player entered.");
+		ELSE;
+			ECHO("/msg %@&selectedmodreqplayername% %&message%");
+		ENDIF;
+	}$$
 
 
 Not Currently Used:
