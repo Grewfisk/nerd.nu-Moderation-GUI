@@ -1,0 +1,35 @@
+Requests
+	$${
+		SHOWGUI("Requests");
+		BINDGUI("playback","Requests");
+	}$$
+
+Regions
+	$${
+		SHOWGUI("Regions");
+		BINDGUI("playback","Regions");
+	}$$
+
+Easy Signs
+	$${
+		SHOWGUI("EasySigns");
+		BINDGUI("playback","EasySigns");
+	}$$
+
+Player Moderation
+	$${
+		SHOWGUI("PlayerModeration");
+		BINDGUI("playback","PlayerModeration");
+	}$$
+
+Griefing
+	$${
+		SHOWGUI("Griefing");
+		BINDGUI("playback","Griefing");
+	}$$
+
+X-Ray
+	$${
+		SHOWGUI("XRay");
+		BINDGUI("playback","XRay");
+	}$$
