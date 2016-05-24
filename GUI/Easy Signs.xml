@@ -36,7 +36,7 @@
                 <text>Requests</text>
                 <visible>1</visible>
             </gc:button>
-            <gc:button id="7261" name="EasySignsBtnScreenRegions" x="0" y="13">
+            <gc:button id="7292" name="EasySignsBtnScreenRegions" x="0" y="13">
                 <background>#DE000000</background>
                 <colour>#C700FF</colour>
                 <hide>0</hide>
