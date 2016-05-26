@@ -239,7 +239,7 @@ Macro[7004].Macro=/check
 Macro[7005].Macro=/check -a
 
 # CONTROL_MODREQESTSBTNCLAIM
-Macro[7011].Macro=$${IF(%@&currentreqnumber%="");LOG(No Mod Reqest Number Selected);ELSE;ECHO("/claim %@&currentreqnumber%");SHOWGUI(ModRequests);ENDIF;}$$
+Macro[7011].Macro=$${IF(%@&currentreqnumber%="");LOG(No Mod Reqest Number Selected);ELSE;ECHO("/unclaim %@&currentreqnumber%");ENDIF;}$$
 
 # CONTROL_MODREQESTSBTNUNCLAIM
 Macro[7012].Macro=$${IF(%@&currentreqnumber%="");LOG(No Mod Reqest Number Selected);ELSE;ECHO("/unclaim %@&currentreqnumber%");SHOWGUI(ModRequests);ENDIF;}$$
